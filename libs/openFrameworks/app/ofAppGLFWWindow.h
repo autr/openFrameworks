@@ -87,6 +87,7 @@ public:
 
 	void hideCursor();
 	void showCursor();
+    void setCursor(ofCursorType type);
 
 	int getHeight();
 	int getWidth();

@@ -671,6 +671,29 @@ void ofAppGLFWWindow::showCursor(){
 };
 
 //------------------------------------------------------------
+void ofAppGLFWWindow::setCursor(ofCursorType type){
+    glfwSetInputMode(windowP,GLFW_CURSOR,GLFW_CURSOR_NORMAL);
+    
+    GLFWcursor * cursor;
+    if (type == OF_CURSOR_IBEAM) {
+        cursor = glfwCreateStandardCursor(GLFW_IBEAM_CURSOR);
+    } else if (type == OF_CURSOR_IBEAM) {
+        cursor = glfwCreateStandardCursor(GLFW_HRESIZE_CURSOR);
+    } else if (type == OF_CURSOR_CROSS) {
+        cursor = glfwCreateStandardCursor(GLFW_CROSSHAIR_CURSOR );
+    } else if (type == OF_CURSOR_HAND) {
+        cursor = glfwCreateStandardCursor(GLFW_HAND_CURSOR);
+    } else if (type == OF_CURSOR_HRESIZE) {
+        cursor = glfwCreateStandardCursor(GLFW_HRESIZE_CURSOR);
+    } else if (type == OF_CURSOR_VRESIZE) {
+        cursor = glfwCreateStandardCursor(GLFW_VRESIZE_CURSOR);
+    } else {
+        cursor = glfwCreateStandardCursor(GLFW_ARROW_CURSOR );
+    }
+    glfwSetCursor(windowP,cursor);
+};
+
+//------------------------------------------------------------
 void ofAppGLFWWindow::enableSetupScreen(){
 	bEnableSetupScreen = true;
 };

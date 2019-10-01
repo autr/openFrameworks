@@ -13,6 +13,14 @@ enum ofWindowMode{
 	OF_GAME_MODE	= 2
 };
 
+enum ofCursorType: short{
+    OF_CURSOR_ARROW = 1,
+    OF_CURSOR_IBEAM = 2,
+    OF_CURSOR_CROSS = 3,
+    OF_CURSOR_HAND = 4,
+    OF_CURSOR_HRESIZE = 5,
+    OF_CURSOR_VRESIZE = 6
+};
 
 /// \brief Used to represent the available screen orientations.
 ///
